@@ -1,0 +1,22 @@
+{
+  "name": "Spring RabbitMQ Sample Application",
+  "description": "A sample Spring MVC + Rabbit MQ Sample application",
+  "main": "",
+  "authors": [
+    "John Muiruri"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "notifyjs": "^0.4.2"
+  }
+}
