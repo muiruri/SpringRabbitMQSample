@@ -28,19 +28,11 @@
 
     <rabbit:template id="amqpTemplate" connection-factory="connectionFactory"/>
 
-    <bean id="jsonConverter" class="org.springframework.amqp.support.converter.SimpleMessageConverter"/>
-
-    <!--<rabbit:listener-container
-            connection-factory="connectionFactory"
-            message-converter="jsonConverter"
-            concurrency="2"
-            /> -->
 
     <bean id="rabbitListenerContainerFactory"
           class="org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory">
         <property name="connectionFactory" ref="connectionFactory"/>
         <property name="concurrentConsumers" value="3"/>
-        <!--<property name="messageConverter" ref="jsonConverter"/> -->
         <property name="maxConcurrentConsumers" value="10"/>
     </bean>
 </beans>

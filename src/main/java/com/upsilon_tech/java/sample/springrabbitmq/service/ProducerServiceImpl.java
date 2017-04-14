@@ -14,8 +14,15 @@ import java.util.concurrent.TimeoutException;
 @Service
 public class ProducerServiceImpl implements ProducerService {
 
+    /**
+     *  The name of the Exchange
+     */
     private static final String EXCHANGE_NAME = "messages";
 
+    /**
+     *  This method publishes a message
+     * @param message
+     */
     @Override
     public void produceMessage(String message) {
         try {

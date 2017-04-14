@@ -19,6 +19,11 @@ public class IndexController {
         return "index";
     }
 
+    /**
+     *  This end-point receives a message and passes it to the producer.
+     * @param message
+     * @return
+     */
     @RequestMapping(value = "/sendMessage", method = RequestMethod.POST)
     public @ResponseBody String sendMessage(@RequestBody String message) {
         producerService.produceMessage(message);
